@@ -1,0 +1,48 @@
+local hsl = require("lush.hsl")
+
+-- aura palette
+return {
+  dark          = hsl("#15141b"),
+  white         = hsl("#edecee"),
+  gray          = hsl("#6d6d6d"),
+  purple        = hsl("#a277ff"),
+  purple_fading = hsl("#3d375e"),
+  green         = hsl("#61ffca"),
+  orange        = hsl("#ffca85"),
+  pink          = hsl("#f694ff"),
+  blue          = hsl("#82e2ff"),
+  red           = hsl("#ff6767"),
+
+  background = hsl("#15141b"),
+  foreground = hsl("#edecee"),
+  muted      = hsl("#6d6d6d"),
+  selection  = hsl("#3d375e"),
+  primary    = hsl("#a277ff"),
+  secondary  = hsl("#61ffca"),
+  tertiary   = hsl("#ffca85"),
+  quaternary = hsl("#f694ff"),
+  quinary    = hsl("#82e2ff"),
+  senary     = hsl("#ff6767"),
+
+  soft_dark          = hsl("#15141b"),
+  soft_white         = hsl("#bdbdbd"),
+  soft_gray          = hsl("#6d6d6d"),
+  soft_purple        = hsl("#8464c6"),
+  soft_purple_fading = hsl("#3d375e"),
+  soft_green         = hsl("#54c59f"),
+  soft_orange        = hsl("#c7a06f"),
+  soft_pink          = hsl("#c17ac8"),
+  soft_blue          = hsl("#6cb2c7"),
+  soft_red           = hsl("#c55858"),
+
+  soft_background = hsl("#15141b"),
+  soft_foreground = hsl("#bdbdbd"),
+  soft_muted      = hsl("#6d6d6d"),
+  soft_selection  = hsl("#3d375e"),
+  soft_primary    = hsl("#8464c6"),
+  soft_secondary  = hsl("#54c59f"),
+  soft_tertiary   = hsl("#c7a06f"),
+  soft_quaternary = hsl("#c17ac8"),
+  soft_quinary    = hsl("#6cb2c7"),
+  soft_senary     = hsl("#c55858"),
+}
