@@ -4,9 +4,8 @@ local styles = require("aura.settings").styles
 local utils = require("aura.utils")
 
 -- options (dark mode by default)
-local background = colors.dark
-
-local foreground = colors.white
+local background = colors.background
+local foreground = colors.foreground
 
 local red = colors.red
 local green = colors.green
@@ -24,8 +23,8 @@ end
 
 -- swap colors if light mode
 if bg == "soft" then
-	background = colors.soft_white
-	foreground = colors.soft_dark
+	background = colors.soft_background
+	foreground = colors.soft_foreground
 	red = colors.soft_red
 	green = colors.soft_green
 	blue = colors.soft_blue
@@ -70,17 +69,17 @@ end
 -- neovim terminal mode colors
 vim.g.terminal_color_0 = background.hex
 vim.g.terminal_color_8 = gray.hex
-vim.g.terminal_color_1 = colors.neutral_red.hex
+vim.g.terminal_color_1 = colors.soft_red.hex
 vim.g.terminal_color_9 = red.hex
-vim.g.terminal_color_2 = colors.neutral_green.hex
+vim.g.terminal_color_2 = colors.soft_green.hex
 vim.g.terminal_color_10 = green.hex
-vim.g.terminal_color_3 = colors.neutral_yellow.hex
+vim.g.terminal_color_3 = colors.soft_orange.hex
 vim.g.terminal_color_11 = orange.hex
-vim.g.terminal_color_4 = colors.neutral_blue.hex
+vim.g.terminal_color_4 = colors.soft_blue.hex
 vim.g.terminal_color_12 = blue.hex
-vim.g.terminal_color_5 = colors.neutral_purple.hex
+vim.g.terminal_color_5 = colors.soft_purple.hex
 vim.g.terminal_color_13 = purple.hex
-vim.g.terminal_color_6 = colors.neutral_purple_faded.hex
+vim.g.terminal_color_6 = colors.soft_purple_faded.hex
 vim.g.terminal_color_14 = purple_faded.hex
 vim.g.terminal_color_7 = foreground.hex
 vim.g.terminal_color_15 = foreground.hex
@@ -93,15 +92,7 @@ local base_group = lush(function()
 	return {
 		-- Base groups
 		AuraForeground({ fg = foreground }),
-		AuraForeground({ fg = foreground }),
-		AuraForeground({ fg = foreground }),
-		AuraForeground({ fg = foreground }),
-		AuraForeground({ fg = foreground }),
 		AuraGray({ fg = gray }),
-		AuraBackground({ fg = background }),
-		AuraBackground({ fg = background }),
-		AuraBackground({ fg = background }),
-		AuraBackground({ fg = background }),
 		AuraBackground({ fg = background }),
 
 		AuraRed({ fg = red }),
@@ -170,8 +161,8 @@ local base_group = lush(function()
 		SpellBad({ AuraRedUnderline }),
 		StatusLine({ fg = background, bg = foreground, gui = styles.inverse }),
 		StatusLineNC({ fg = background, bg = foreground, gui = styles.inverse }),
-		TabLineFill({ fg = background, bg = bg1, gui = styles.invert_tabline }),
-		TabLine({ fg = background, bg = bg1, gui = styles.invert_tabline }),
+		TabLineFill({ fg = background, bg = background, gui = styles.invert_tabline }),
+		TabLine({ fg = background, bg = background, gui = styles.invert_tabline }),
 		TabLineSel({ fg = tabline_sel, bg = background, gui = styles.invert_tabline }),
 		Title({ AuraGreenBold }),
 		Visual({ bg = background, gui = styles.invert_selection }),
@@ -231,9 +222,9 @@ local base_group = lush(function()
 		gitcommitSelectedFile({ AuraGreen }),
 		gitcommitDiscardedFile({ AuraRed }),
 		-- checkhealth
-		healthError({ fg = backgroung, bg = red }),
-		healthSuccess({ fg = backgroung, bg = green }),
-		healthWarning({ fg = backgroung, bg = orange }),
+		healthError({ fg = background, bg = red }),
+		healthSuccess({ fg = background, bg = green }),
+		healthWarning({ fg = background, bg = orange }),
 	}
 end)
 

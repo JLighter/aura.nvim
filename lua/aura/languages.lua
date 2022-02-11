@@ -1,7 +1,7 @@
 -- language specific higlights
 local lush = require("lush")
-local base = require("gruvbox.base")
-local styles = require("gruvbox.settings").styles
+local base = require("aura.base")
+local styles = require("aura.settings").styles
 local table_concat = table.concat
 
 -- golang

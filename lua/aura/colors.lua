@@ -2,18 +2,18 @@ local hsl = require("lush.hsl")
 
 -- aura palette
 return {
-  dark          = hsl("#15141b"),
+  dark          = hsl("#21202d"),
   white         = hsl("#edecee"),
   gray          = hsl("#6d6d6d"),
   purple        = hsl("#a277ff"),
-  purple_fading = hsl("#3d375e"),
+  purple_faded  = hsl("#3d375e"),
   green         = hsl("#61ffca"),
   orange        = hsl("#ffca85"),
   pink          = hsl("#f694ff"),
   blue          = hsl("#82e2ff"),
   red           = hsl("#ff6767"),
 
-  background = hsl("#15141b"),
+  background = hsl("#21202d"),
   foreground = hsl("#edecee"),
   muted      = hsl("#6d6d6d"),
   selection  = hsl("#3d375e"),
@@ -24,11 +24,11 @@ return {
   quinary    = hsl("#82e2ff"),
   senary     = hsl("#ff6767"),
 
-  soft_dark          = hsl("#15141b"),
+  soft_dark          = hsl("#20212d"),
   soft_white         = hsl("#bdbdbd"),
   soft_gray          = hsl("#6d6d6d"),
   soft_purple        = hsl("#8464c6"),
-  soft_purple_fading = hsl("#3d375e"),
+  soft_purple_faded  = hsl("#3d375e"),
   soft_green         = hsl("#54c59f"),
   soft_orange        = hsl("#c7a06f"),
   soft_pink          = hsl("#c17ac8"),

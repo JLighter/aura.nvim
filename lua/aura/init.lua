@@ -7,6 +7,6 @@ local specs = { base, languages, plugins }
 local spec = lush.merge(specs)
 
 -- checking if user has lightline and adding support
-require("aura.plugins.lightline").init(spec)
+-- require("aura.plugins.lightline").init(spec)
 
 return spec
