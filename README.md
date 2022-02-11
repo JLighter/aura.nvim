@@ -1,3 +1,7 @@
+<h3 align="center">Aura Theme for Neovim</h3>
+<img width="1552" alt="Aura Theme for Neovim" src="https://user-images.githubusercontent.com/41034356/153639835-8aa57a20-96b4-4d09-8436-d390560b7ad5.png">
+
+
 # Usage
 
 You can already cone this repository from your favorite package manager to neovim.
@@ -7,6 +11,17 @@ I personaly prefer Packer but i think it'll work on yours if you translate this 
 ```vim
 use {'rktjmp/lush.nvim'}
 use {'JLighter/aura.nvim'}
+```
+
+After installing the plugin, you can load aura like so:
+```vim
+" Vim Script
+colorscheme aura
+```
+
+```lua
+-- Lua
+vim.cmd[[colorscheme aura]]
 ```
 
 # Requirements
@@ -29,19 +44,20 @@ use {'JLighter/aura.nvim'}
 
 # Contributors
 <table>
-  <thead>
-    <tr>
-      <td valign="bottom"><p align="center">
-        <a href="https://github.com/your-username">
+  <tr>
+    <td align="center">
+        <a href="https://github.com/JLighter">
           <img src="https://github.com/JLighter.png?size=100" align="center" />
         </a>
-      </p></td>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td><a href="https://github.com/JLighter">JLighter</a></td>
-    </tr>
-  </tbody>
+      <br />
+      <sub><b>JLighter</b></sub>
+    </td>
+    <td align="center">
+        <a href="https://github.com/kavinvalli">
+          <img src="https://github.com/kavinvalli.png?size=100" align="center" />
+        </a>
+      <br />
+      <sub><b>Kavin Valli</b></sub>
+    </td>
+  </tr>
 </table>
