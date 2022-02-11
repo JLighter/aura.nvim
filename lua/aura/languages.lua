@@ -127,14 +127,14 @@ end)
 
 local html = lush(function()
   return {
-    htmlTag({ base.AuraPurpleFadedBold }),
-    htmlEndTag({ base.AuraPurpleFadedBold }),
-    htmlTagName({ base.AuraBlue }),
-    htmlArg({ base.AuraOrange }),
+    htmlTag({ base.AuraForeground }),
+    htmlEndTag({ base.AuraForeground }),
+    htmlTagName({ base.AuraPurple }),
+    htmlArg({ base.AuraPink }),
     htmlScriptTag({ base.AuraPurple }),
-    htmlTagN({ base.AuraForeground }),
-    htmlSpecialTagName({ base.AuraBlue }),
-    htmlSpecialChar({ base.AuraRed }),
+    htmlTagN({ base.AuraPurple }),
+    htmlSpecialTagName({ base.AuraPurple }),
+    htmlSpecialChar({ base.AuraGreen }),
     htmlLink({ fg = base.AuraForeground.fg.hex, gui = styles.underline }),
     htmlBold({ fg = base.AuraForeground.fg.hex, gui = styles.bold }),
     htmlBoldUnderline({
