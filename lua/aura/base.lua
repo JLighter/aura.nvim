@@ -21,18 +21,6 @@ if bg == nil then
 	vim.o.background = bg
 end
 
--- swap colors if light mode
-if bg == "soft" then
-	background = colors.soft_background
-	foreground = colors.soft_foreground
-	red = colors.soft_red
-	green = colors.soft_green
-	blue = colors.soft_blue
-	purple = colors.soft_purple
-	purple_faded = colors.soft_purple_faded
-	orange = colors.soft_orange
-end
-
 -- extending colors table with basic names for easy customization in g:aura_* options
 colors.background = background
 colors.foreground = foreground
