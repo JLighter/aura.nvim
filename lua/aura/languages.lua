@@ -507,7 +507,7 @@ end)
 local lua = lush(function()
   return {
     luaIn({ base.AuraRed }),
-    luaFunction({ base.AuraPurpleFaded }),
+    luaFunction({ base.AuraPurple }),
     luaTable({ base.AuraOrange }),
   }
 end)
