@@ -34,6 +34,33 @@ vim.cmd[[colorscheme aura]]
 - [x] Minimal theme 
 - [x] Support [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 - [x] Support [Nvimtree](https://github.com/kyazdani42/nvim-tree.lua)  
+- [ ] Support common languages
+  - [ ] golang
+  - [ ] java
+  - [ ] xml
+  - [ ] viml
+  - [ ] c
+  - [ ] python
+  - [ ] clojure
+  - [x] html
+  - [ ] css
+  - [ ] js
+  - [ ] typescript
+  - [ ] jsx
+  - [ ] purescript
+  - [ ] coffeescript
+  - [ ] ruby
+  - [ ] objective-c
+  - [ ] moonscript
+  - [ ] elixir
+  - [ ] scale
+  - [ ] markdown
+  - [ ] haskell
+  - [ ] json
+  - [ ] c#
+  - [ ] rust
+  - [ ] ocaml
+  - [x] lua
 - [ ] Support [Lualine](https://github.com/nvim-lualine/lualine.nvim)  
 - [ ] Support [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [ ] Support common languages
