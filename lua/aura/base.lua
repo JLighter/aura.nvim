@@ -129,7 +129,7 @@ local base_group = lush(function()
 		DiffDelete({ fg = red, bg = background, gui = styles.inverse }),
 		DiffText({ fg = orange, bg = background, gui = styles.inverse }),
 		ErrorMsg({ fg = background, bg = red, gui = styles.bold }),
-		VertSplit({ fg = background.lighten(5), bg = vert_split }),
+		VertSplit({ fg = background.darken(20), bg = vert_split }),
 		Folded({ fg = gray, bg = background, gui = styles.italic_strings }),
 		FoldColumn({ fg = gray, bg = background }),
 		SignColumn({ bg = sign_column }),

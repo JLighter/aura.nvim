@@ -79,6 +79,7 @@ local plugins = lush(function()
     GitSignsChange({ base.AuraOrange }),
     GitSignsDelete({ base.AuraRed }),
     -- nvimtree
+    NvimTreeNormal({ fg = base.AuraForeground.fg.hex, bg = base.AuraBackground.fg.darken(15) }),
     NvimTreeSymlink({ base.AuraGray }),
     NvimTreeFolderName({ base.AuraPurple }),
     NvimTreeRootFolder({ base.AuraPurpleBold }),
