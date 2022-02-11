@@ -1,26 +1,37 @@
 local hsl = require("lush.hsl")
 
+local  dark          = hsl("#21202d")
+local  white         = hsl("#edecee")
+local  gray          = hsl("#6d6d6d")
+local  purple        = hsl("#a277ff")
+local  purple_faded  = hsl("#3d375e")
+local  green         = hsl("#61ffca")
+local  orange        = hsl("#ffca85")
+local  pink          = hsl("#f694ff")
+local  blue          = hsl("#82e2ff")
+local  red           = hsl("#ff6767")
+
 -- aura palette
 return {
-  dark          = hsl("#21202d"),
-  white         = hsl("#edecee"),
-  gray          = hsl("#6d6d6d"),
-  purple        = hsl("#a277ff"),
-  purple_faded  = hsl("#3d375e"),
-  green         = hsl("#61ffca"),
-  orange        = hsl("#ffca85"),
-  pink          = hsl("#f694ff"),
-  blue          = hsl("#82e2ff"),
-  red           = hsl("#ff6767"),
+  dark          = dark,
+  white         = white,
+  gray          = gray,
+  purple        = purple,
+  purple_faded  = purple_faded,
+  green         = green,
+  orange        = orange,
+  pink          = pink,
+  blue          = blue,
+  red           = red,
 
-  background = hsl("#21202d"),
-  foreground = hsl("#edecee"),
-  muted      = hsl("#6d6d6d"),
-  selection  = hsl("#3d375e"),
-  primary    = hsl("#a277ff"),
-  secondary  = hsl("#61ffca"),
-  tertiary   = hsl("#ffca85"),
-  quaternary = hsl("#f694ff"),
-  quinary    = hsl("#82e2ff"),
-  senary     = hsl("#ff6767"),
+  background = dark,
+  foreground = white,
+  muted      = gray,
+  selection  = purple_faded,
+  primary    = purple,
+  secondary  = green,
+  tertiary   = orange,
+  quaternary = pink,
+  quinary    = blue,
+  senary     = red,
 }

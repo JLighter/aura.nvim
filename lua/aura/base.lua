@@ -11,6 +11,7 @@ local red = colors.red
 local green = colors.green
 local blue = colors.blue
 local purple = colors.purple
+local pink = colors.pink
 local purple_faded = colors.purple_faded
 local orange = colors.orange
 local gray = colors.gray
@@ -21,15 +22,15 @@ if bg == nil then
 	vim.o.background = bg
 end
 
--- extending colors table with basic names for easy customization in g:aura_* options
-colors.background = background
-colors.foreground = foreground
-colors.red = red
-colors.green = green
-colors.blue = blue
-colors.purple = purple
-colors.purple_faded = purple_faded
-colors.orange = orange
+-- -- extending colors table with basic names for easy customization in g:aura_* options
+-- colors.background = background
+-- colors.foreground = foreground
+-- colors.red = red
+-- colors.green = green
+-- colors.blue = blue
+-- colors.purple = purple
+-- colors.purple_faded = purple_faded
+-- colors.orange = orange
 
 local hls_cursor = utils.get_color_from_var(vim.g.aura_hls_cursor, orange, colors)
 local hls_highlight = utils.get_color_from_var(vim.g.aura_hls_highlight, orange, colors)
@@ -57,18 +58,12 @@ end
 -- neovim terminal mode colors
 vim.g.terminal_color_0 = background.hex
 vim.g.terminal_color_8 = gray.hex
-vim.g.terminal_color_1 = colors.soft_red.hex
-vim.g.terminal_color_9 = red.hex
-vim.g.terminal_color_2 = colors.soft_green.hex
-vim.g.terminal_color_10 = green.hex
-vim.g.terminal_color_3 = colors.soft_orange.hex
-vim.g.terminal_color_11 = orange.hex
-vim.g.terminal_color_4 = colors.soft_blue.hex
-vim.g.terminal_color_12 = blue.hex
-vim.g.terminal_color_5 = colors.soft_purple.hex
-vim.g.terminal_color_13 = purple.hex
-vim.g.terminal_color_6 = colors.soft_purple_faded.hex
-vim.g.terminal_color_14 = purple_faded.hex
+vim.g.terminal_color_1 = red.hex
+vim.g.terminal_color_2 = green.hex
+vim.g.terminal_color_3 = orange.hex
+vim.g.terminal_color_4 = blue.hex
+vim.g.terminal_color_5 = purple.hex
+vim.g.terminal_color_6 = purple_faded.hex
 vim.g.terminal_color_7 = foreground.hex
 vim.g.terminal_color_15 = foreground.hex
 
@@ -95,6 +90,8 @@ local base_group = lush(function()
 		AuraPurpleFadedBold({ fg = purple_faded, gui = styles.bold }),
 		AuraOrange({ fg = orange }),
 		AuraOrangeBold({ fg = orange, gui = styles.bold }),
+		AuraPink({ fg = pink }),
+		AuraPinkBold({ fg = pink, gui = styles.bold }),
 
 		AuraRedSign({ fg = red, bg = sign_column, gui = styles.invert_signs }),
 		AuraGreenSign({ fg = green, bg = sign_column, gui = styles.invert_signs }),
@@ -102,6 +99,7 @@ local base_group = lush(function()
 		AuraPurpleSign({ fg = purple, bg = sign_column, gui = styles.invert_signs }),
 		AuraPurpleFadedSign({ fg = purple_faded, bg = sign_column, gui = styles.invert_signs }),
 		AuraOrangeSign({ fg = orange, bg = sign_column, gui = styles.invert_signs }),
+		AuraPinkSign({ fg = pink, bg = sign_column, gui = styles.invert_signs }),
 
 		AuraRedUnderline({ gui = styles.undercurl, sp = red }),
 		AuraGreenUnderline({ gui = styles.undercurl, sp = green }),
@@ -109,6 +107,7 @@ local base_group = lush(function()
 		AuraPurpleUnderline({ gui = styles.undercurl, sp = purple }),
 		AuraPurpleFadedUnderline({ gui = styles.undercurl, sp = purple_faded }),
 		AuraOrangeUnderline({ gui = styles.undercurl, sp = orange }),
+		AuraPinkUnderline({ gui = styles.undercurl, sp = pink }),
 
 		ColorColumn({ bg = color_column }),
 		Conceal({ fg = blue }),
@@ -117,7 +116,7 @@ local base_group = lush(function()
 		iCursor({ Cursor }),
 		vCursor({ Cursor }),
 		CursorIM({ Cursor }),
-		CursorLine({ bg = background }),
+		CursorLine({ bg = background.lighten(5) }),
 		CursorColumn({ CursorLine }),
 		Directory({ AuraGreenBold }),
 		DiffAdd({ fg = green, bg = background, gui = styles.inverse }),
@@ -130,8 +129,8 @@ local base_group = lush(function()
 		FoldColumn({ fg = gray, bg = background }),
 		SignColumn({ bg = sign_column }),
 		IncSearch({ fg = hls_cursor, bg = background, gui = styles.inverse }),
-		LineNr({ fg = background, bg = number_column }),
-		CursorLineNr({ fg = orange, bg = background }),
+		LineNr({ fg = background.lighten(25), bg = number_column }),
+		CursorLineNr({ fg = background.lighten(25), bg = background, gui = styles.bold }),
 		MatchParen({ bg = background, gui = styles.bold }),
 		ModeMsg({ AuraOrangeBold }),
 		MoreMsg({ AuraOrangeBold }),
@@ -153,11 +152,11 @@ local base_group = lush(function()
 		TabLine({ fg = background, bg = background, gui = styles.invert_tabline }),
 		TabLineSel({ fg = tabline_sel, bg = background, gui = styles.invert_tabline }),
 		Title({ AuraGreenBold }),
-		Visual({ bg = background, gui = styles.invert_selection }),
+		Visual({ bg = colors.selection, gui = styles.invert_selection }),
 		VisualNOS({ Visual }),
 		WarningMsg({ AuraRedBold }),
 		WildMenu({ fg = blue, bg = background, gui = styles.bold }),
-		Constant({ AuraPurple }),
+		Constant({ AuraGreen }),
 		Special({ fg = special_string_fg, bg = special_string_bg, gui = special_string_gui }),
 		String({
 			fg = improved_strings_fg,
@@ -169,23 +168,23 @@ local base_group = lush(function()
 		Boolean({ AuraPurple }),
 		Float({ AuraPurple }),
 		Identifier({ AuraBlue }),
-		Function({ AuraGreenBold }),
+		Function({ AuraPurpleBold }),
 		Statement({ AuraRed }),
 		Conditional({ AuraRed }),
 		Repeat({ AuraRed }),
 		Label({ AuraRed }),
 		Exception({ AuraRed }),
 		Keyword({ AuraRed }),
-		Operator({ AuraOrange }),
+		Operator({ AuraPurple }),
 		PreProc({ AuraPurpleFaded }),
 		Include({ AuraPurpleFaded }),
 		Define({ AuraPurpleFaded }),
 		Macro({ AuraPurpleFaded }),
 		PreCondit({ AuraPurpleFaded }),
-		Type({ AuraOrange }),
+		Type({ AuraBlue }),
 		StorageClass({ AuraOrange }),
 		Structure({ AuraPurpleFaded }),
-		Typedef({ AuraOrange }),
+		Typedef({ AuraPink }),
 		SpecialChar({ AuraRed }),
 		Tag({ AuraPurpleFadedBold }),
 		Delimiter({ AuraForeground }),

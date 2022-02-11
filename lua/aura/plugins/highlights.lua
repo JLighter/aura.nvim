@@ -68,6 +68,16 @@ local plugins = lush(function()
 		TSStructure({ base.AuraOrange }),
 		TSTag({ base.AuraOrange }),
 		TSTagDelimiter({ base.AuraGreen }),
+    -- gitsign
+    GitSignsAddNr({ base.AuraGreen }),
+    GitSignsChangeNr({ base.AuraOrange }),
+    GitSignsDeleteNr({ base.AuraRed }),
+    GitSignsAddLn({ base.AuraGreen }),
+    GitSignsChangeLn({ base.AuraOrange }),
+    GitSignsDeleteLn({ base.AuraRed }),
+    GitSignsAdd({ base.AuraGreen }),
+    GitSignsChange({ base.AuraOrange }),
+    GitSignsDelete({ base.AuraRed }),
 	}
 end)
 

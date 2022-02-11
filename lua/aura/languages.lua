@@ -11,7 +11,7 @@ local golang = lush(function()
     goConstants({ base.AuraPurple }),
     goDeclaration({ base.AuraRed }),
     goDeclType({ base.AuraBlue }),
-    goBuiltins({ base.AuraOrange }),
+    goBuiltins({ base.AuraGreen }),
   }
 end)
 
@@ -27,7 +27,7 @@ local java = lush(function()
     javaParen3({ base.AuraForeground }),
     javaParen4({ base.AuraForeground }),
     javaParen5({ base.AuraForeground }),
-    javaOperator({ base.AuraOrange }),
+    javaOperator({ base.AuraPurple }),
   }
 end)
 
@@ -77,20 +77,21 @@ end)
 
 local python = lush(function()
   return {
-    pythonBuiltin({ base.AuraOrange }),
-    pythonBuiltinObj({ base.AuraOrange }),
-    pythonBuiltinFunc({ base.AuraOrange }),
-    pythonFunction({ base.AuraPurpleFaded }),
+    pythonBuiltin({ base.AuraGreen }),
+    pythonBuiltinObj({ base.AuraGreen }),
+    pythonBuiltinFunc({ base.AuraGreen }),
+    pythonFunction({ base.AuraPurple }),
+    pythonClass({ base.AuraBlue }),
     pythonDecorator({ base.AuraRed }),
-    pythonInclude({ base.AuraBlue }),
-    pythonImport({ base.AuraBlue }),
+    pythonInclude({ base.AuraPurple }),
+    pythonImport({ base.AuraPurple }),
     pythonRun({ base.AuraBlue }),
     pythonCoding({ base.AuraBlue }),
     pythonOperator({ base.AuraRed }),
     pythonException({ base.AuraRed }),
     pythonExceptions({ base.AuraPurple }),
     pythonBoolean({ base.AuraPurple }),
-    pythonDot({ base.AuraForeground }),
+    pythonDot({ base.AuraPink }),
     pythonConditional({ base.AuraRed }),
     pythonRepeat({ base.AuraRed }),
     pythonDottedName({ base.AuraGreenBold }),
