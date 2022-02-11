@@ -36,6 +36,8 @@ vim.cmd[[colorscheme aura]]
 - [x] Support [Nvimtree](https://github.com/kyazdani42/nvim-tree.lua)  
 - [ ] Support [Lualine](https://github.com/nvim-lualine/lualine.nvim)  
 - [ ] Support [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [ ] Support common languages
+- [ ] Support Neovim LSP
 - [ ] Make it portable
 
 # See Also
