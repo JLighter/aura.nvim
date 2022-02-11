@@ -34,6 +34,7 @@ vim.cmd[[colorscheme aura]]
 - [x] Minimal theme 
 - [x] Support [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 - [x] Support [Nvimtree](https://github.com/kyazdani42/nvim-tree.lua)  
+- [ ] Support [Fugitive](https://github.com/tpope/vim-fugitive)  
 - [ ] Support common languages
   - [ ] golang
   - [ ] java
