@@ -78,6 +78,30 @@ local plugins = lush(function()
     GitSignsAdd({ base.AuraGreen }),
     GitSignsChange({ base.AuraOrange }),
     GitSignsDelete({ base.AuraRed }),
+    -- nvimtree
+    NvimTreeSymlink({ base.AuraGray }),
+    NvimTreeFolderName({ base.AuraPurple }),
+    NvimTreeRootFolder({ base.AuraPurpleBold }),
+    NvimTreeFolderIcon({ base.AuraPuple }),
+    NvimTreeEmptyFolderName({ base.AuraPurple }),
+    NvimTreeOpenedFolderName({ base.AuraPurple }),
+    NvimTreeExecFile({ base.AuraForegroundBold }),
+    NvimTreeOpenedFile({ base.AuraGreen }),
+    NvimTreeSpecialFile({ base.AuraBlue }),
+    NvimTreeImageFile({ base.AuraForeground }),
+    NvimTreeIndentMarker({ colors.BackgroundLighten }),
+
+    LspDiagnosticsError({ base.healthError}),
+    LspDiagnosticsWarning({ base.AuraOrangeBold }),
+    LspDiagnosticsInformation({ base.AuraOrange }),
+    LspDiagnosticsHint({ base.AuraForegroundUnderline }),
+
+    NvimTreeGitDirty({ base.AuraOrange }),
+    NvimTreeGitStaged({ base.AuraGreen }),
+    NvimTreeGitMerge({ base.AuraRed }),
+    NvimTreeGitRenamed({ base.AuraOrangeBold }),
+    NvimTreeGitNew({ base.AuraGreen }),
+    NvimTreeGitDeleted({ base.AuraRed }),
 	}
 end)
 

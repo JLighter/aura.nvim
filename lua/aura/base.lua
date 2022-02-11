@@ -35,7 +35,7 @@ end
 local hls_cursor = utils.get_color_from_var(vim.g.aura_hls_cursor, orange, colors)
 local hls_highlight = utils.get_color_from_var(vim.g.aura_hls_highlight, orange, colors)
 local number_column = utils.get_color_from_var(vim.g.aura_number_column, nil, colors)
-local color_column = utils.get_color_from_var(vim.g.aura_color_column, background, colors)
+local color_column = utils.get_color_from_var(vim.g.aura_color_column, background.lighten(5), colors)
 local vert_split = utils.get_color_from_var(vim.g.aura_vert_split, background, colors)
 local tabline_sel = utils.get_color_from_var(vim.g.aura_tabline_sel, green, colors)
 local sign_column = utils.get_color_from_var(vim.g.aura_sign_column, background, colors)
@@ -75,9 +75,14 @@ local base_group = lush(function()
 	return {
 		-- Base groups
 		AuraForeground({ fg = foreground }),
-		AuraGray({ fg = gray }),
+		AuraForegroundBold({ fg = foreground, gui = styles.bold }),
+		AuraForegroundUnderline({ fg = foreground, sp = foreground }),
+		AuraBackgroundLighten({ fg = background.lighten(25) }),
 		AuraBackground({ fg = background }),
+		AuraBackgroundBold({ fg = background, gui = styles.bold }),
+		AuraBackgroundUnderline({ fg = background, sp = background }),
 
+		AuraGray({ fg = gray }),
 		AuraRed({ fg = red }),
 		AuraRedBold({ fg = red, gui = styles.bold }),
 		AuraGreen({ fg = green }),
@@ -124,7 +129,7 @@ local base_group = lush(function()
 		DiffDelete({ fg = red, bg = background, gui = styles.inverse }),
 		DiffText({ fg = orange, bg = background, gui = styles.inverse }),
 		ErrorMsg({ fg = background, bg = red, gui = styles.bold }),
-		VertSplit({ fg = background, bg = vert_split }),
+		VertSplit({ fg = background.lighten(5), bg = vert_split }),
 		Folded({ fg = gray, bg = background, gui = styles.italic_strings }),
 		FoldColumn({ fg = gray, bg = background }),
 		SignColumn({ bg = sign_column }),
