@@ -4,7 +4,7 @@
 
 # Usage
 
-You can already cone this repository from your favorite package manager to neovim.
+You can already clone this repository from your favorite package manager to neovim.
 
 I personaly prefer Packer but i think it'll work on yours if you translate this command : 
 
