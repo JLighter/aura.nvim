@@ -44,7 +44,7 @@ vim.cmd[[colorscheme aura]]
   - [ ] clojure
   - [x] html
   - [ ] css
-  - [ ] js
+  - [x] javascript
   - [ ] typescript
   - [ ] jsx
   - [ ] purescript
