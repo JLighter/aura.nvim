@@ -116,6 +116,13 @@ local plugins = lush(function()
     DiagnosticUnderlineWarn({ fg=base.AuraOrange.fg.hex, gui=styles.underline }),
     DiagnosticUnderlineInfo({ fg=base.AuraOrange.fg.hex, gui=styles.underline }),
     DiagnosticUnderlineHint({ fg=base.AuraForeground.fg.hex, gui=styles.underline }),
+    -- pmenu
+    Pmenu({ base.AuraMenu }),
+    PmenuSel({ base.AuraMenuSelected }),
+    PmenuSbar({ base.AuraPink }),
+    PmenuThumb({ base.AuraPink }),
+    -- fugitive
+    
 
 	}
 end)

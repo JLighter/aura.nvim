@@ -82,6 +82,9 @@ local base_group = lush(function()
 		AuraBackgroundBold({ fg = background, gui = styles.bold }),
 		AuraBackgroundUnderline({ fg = background, sp = background }),
 
+		AuraMenu({ fg = foreground, bg = background.darken(15) }),
+		AuraMenuSelected({ fg = purple, bg = background.lighten(10) }),
+
 		AuraGray({ fg = gray }),
 		AuraRed({ fg = red }),
 		AuraRedBold({ fg = red, gui = styles.bold }),
@@ -130,7 +133,7 @@ local base_group = lush(function()
 		DiffText({ fg = orange, bg = background, gui = styles.inverse }),
 		ErrorMsg({ fg = background, bg = red, gui = styles.bold }),
 		VertSplit({ fg = background.darken(20), bg = vert_split }),
-		Folded({ fg = gray, bg = background, gui = styles.italic_strings }),
+		Folded({ fg = gray, bg = background.lighten(5), gui = styles.italic_strings }),
 		FoldColumn({ fg = gray, bg = background }),
 		SignColumn({ bg = sign_column }),
 		IncSearch({ fg = hls_cursor, bg = background, gui = styles.inverse }),
@@ -186,7 +189,7 @@ local base_group = lush(function()
 		Define({ AuraPurpleFaded }),
 		Macro({ AuraPurpleFaded }),
 		PreCondit({ AuraPurpleFaded }),
-		Type({ AuraRed }),
+		Type({ AuraBlue }),
 		StorageClass({ AuraOrange }),
 		Structure({ AuraPurpleFaded }),
 		Typedef({ AuraPink }),
