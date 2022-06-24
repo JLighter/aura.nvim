@@ -7,11 +7,17 @@ local table_concat = table.concat
 -- golang
 local golang = lush(function()
   return {
-    goDirective({ base.AuraPurpleFaded }),
+    goDirective({ base.AuraPurple }),
     goConstants({ base.AuraPurple }),
-    goDeclaration({ base.AuraRed }),
-    goDeclType({ base.AuraBlue }),
+    goDeclaration({ base.AuraPurple }),
+    goDeclType({ base.AuraPurple }),
     goBuiltins({ base.AuraGreen }),
+    goStatement({ base.AuraRed }),
+    goType({ base.AuraPurple }),
+    goImport({ base.AuraPurple }),
+    goPackage({ base.AuraPurple }),
+    goString({ base.AuraGreen }),
+    goFormatSpecifier({ base.Special }),
   }
 end)
 
@@ -448,6 +454,15 @@ local lua = lush(function()
   }
 end)
 
+local zsh = lush(function() 
+  return {
+    zshString({ base.AuraGreen }),
+    zshSubst({ base.AuraGreen }),
+    zshSubstDelim({ base.AuraBlue }),
+    zshDeref({ base.AuraForegroundBold }),
+  }
+end)
+
 local langs = lush.merge({
   golang,
   java,
@@ -475,6 +490,7 @@ local langs = lush.merge({
   rust,
   ocaml,
   lua,
+  zsh,
 })
 
 return langs

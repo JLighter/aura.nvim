@@ -6,15 +6,15 @@ local styles = require("aura.settings").styles
 local plugins = lush(function()
 	return {
 		-- netrw
-		netrwDir({ base.AuraPurpleFaded }),
-		netrwClassify({ base.AuraPurpleFaded }),
-		netrwLink({ base.AuraGray }),
+		netrwDir({ base.AuraPurple }),
+		netrwClassify({ base.AuraPurple }),
+		netrwLink({ base.AuraGreen }),
 		netrwSymLink({ base.AuraForeground }),
 		netrwExe({ base.AuraOrange }),
-		netrwComment({ base.AuraGray }),
+		netrwComment({ base.AuraPurpleFaded }),
 		netrwList({ base.AuraBlue }),
 		netrwHelpCmd({ base.AuraPurpleFaded }),
-		netrwCmdSep({ base.AuraForeground }),
+		netrwCmdSep({ base.AuraPurpleFaded }),
 		netrwVersion({ base.AuraGreen }),
 		-- nvim-treesitter
 		TSNone({}),
@@ -43,7 +43,7 @@ local plugins = lush(function()
 		TSParameterReference({ TSParameter }),
 		TSMethod({ base.AuraOrangeBold }),
 		TSField({ base.AuraOrange }),
-		TSProperty({ base.AuraGreen }),
+		TSProperty({ base.AuraForeground }),
 		TSConstructor({ base.AuraGreen }),
 		TSAnnotation({ base.PreProc }),
 		TSAttribute({ base.PreProc }),
@@ -121,9 +121,6 @@ local plugins = lush(function()
     PmenuSel({ base.AuraMenuSelected }),
     PmenuSbar({ base.AuraPink }),
     PmenuThumb({ base.AuraPink }),
-    -- fugitive
-    
-
 	}
 end)
 

@@ -1,6 +1,6 @@
 local hsl = require("lush.hsl")
 
-local  dark          = hsl("#21202d")
+local  dark          = hsl("#16161d")
 local  white         = hsl("#edecee")
 local  gray          = hsl("#6d6d6d")
 local  purple        = hsl("#a277ff")
